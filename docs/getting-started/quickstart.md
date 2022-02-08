@@ -136,7 +136,7 @@ Now if you reload a browser window with an application you should see new inform
 We still can not connect. That's because the client should provide a valid JWT (JSON Web Token) to authenticate itself. This token **must be generated on your backend** and passed to a client-side (over template variables or using separate AJAX call – whatever way you prefer). Since in our simple example we don't have an application backend we can quickly generate an example token for a user using `centrifugo` sub-command `gentoken`. Like this:
 
 ```bash
-./centrifugo gentoken -u 123722
+./centrifugo --config=config.json gentoken -u 123722
 ```
 
 – where `-u` flag sets user ID. The output should be like this:
